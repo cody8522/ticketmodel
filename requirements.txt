@@ -2,5 +2,5 @@ numpy
 pandas
 scikit_learn
 streamlit>=1.10.0
-xgboost
+xgboost==1.4.2
 pyarrow
