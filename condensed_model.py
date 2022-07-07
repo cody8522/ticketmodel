@@ -12,12 +12,10 @@ import ast
 from sklearn import preprocessing
 warnings.filterwarnings('ignore')
 import random
-import requests
 import json
 import datetime
 from datetime import datetime
 from sklearn import preprocessing
-from bs4 import BeautifulSoup
 from sklearn.ensemble import GradientBoostingRegressor, GradientBoostingClassifier
 from sklearn.ensemble import RandomForestRegressor
 import pyarrow.parquet as pq
