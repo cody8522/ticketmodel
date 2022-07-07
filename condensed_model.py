@@ -29,12 +29,10 @@ chartcols = ['sp_followers', 'sp_popularity', 'sp_followers_to_listeners_ratio',
 	 'sp_playlist_total_reach','cm_artist_rank','cm_artist_score','facebook_followers','ins_followers']
 
 
-@st.experimental_memo(suppress_st_warning = True)
-def load_df1():
-	table = pq.read_table("model_startup.parquet")
-	df = table.to_pandas()
-	return df
-df = load_df1()
+
+table = pq.read_table("model_startup.parquet")
+df = table.to_pandas()
+
 
 
 artist_list = ['1', '2', '3']
