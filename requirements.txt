@@ -1,6 +1,6 @@
 numpy
-pandas
+pandas==1.0.5
 scikit_learn
 streamlit
 xgboost
-pyarrow
+pyarrow==8.0.0
