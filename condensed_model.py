@@ -29,15 +29,36 @@ chartcols = ['sp_followers', 'sp_popularity', 'sp_followers_to_listeners_ratio',
 	 'sp_playlist_total_reach','cm_artist_rank','cm_artist_score','facebook_followers','ins_followers']
 
 
+@st.experimental_memo(suppress_st_warning = True)
+def load_df1():
+	table = pq.read_table("model_startup.parquet")
+	df = table.to_pandas()
+	return df
+df = load_df1()
 
-table = pq.read_table("model_startup.parquet")
-df = table.to_pandas()
+@st.experimental_memo(suppress_st_warning = True)
+def venue_list_func():
+	venue_list = df['Name'].tolist()
+	venue_list = sorted(list(set(venue_list)))
+	return venue_list
+venue_list_func()
+venue_list = venue_list_func()
 
+@st.experimental_memo(suppress_st_warning = True)
+def city_list_func():
+	city_list = df['City'].tolist()
+	city_list = sorted(list(set(city_list)))
+	return city_list
+city_list_func()
+city_list = city_list_func()
 
-
-artist_list = ['1', '2', '3']
-venue_list = ['1','2','3']
-city_list = ['1','2','3']
+@st.experimental_memo(suppress_st_warning = True)
+def artist_list_func():
+	artist_list = df['Artist Name'].tolist()
+	artist_list = sorted(list(set(artist_list)))
+	return artist_list
+artist_list_func()
+artist_list = artist_list_func()
 
 
 
