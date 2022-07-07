@@ -1,6 +1,6 @@
-numpy==1.21.0
-pandas==1.0.5
-scikit_learn==1.0.2
-streamlit>=1.10.0
+numpy
+pandas
+pyarrow
+streamlit
+scikit-learn
 xgboost==1.4.2
-pyarrow==6.0.1
